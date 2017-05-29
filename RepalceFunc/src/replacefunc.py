@@ -1,7 +1,9 @@
 #!/opt/libreoffice5.2/program/python
 # -*- coding: utf-8 -*-
-def targetFunc():  # この関数の中の関数を置換する。
-    print("ターゲットの関数")
+
+# @replaceFunc(print, newFunc)
+# def targetFunc():  # この関数の中の関数を置換する。
+#     print("ターゲットの関数")
 def newFunc(arg):  # 置換後の新しい関数。
     print("置換後の関数で{}を出力。".format(arg))
     
@@ -16,6 +18,7 @@ def replaceFunc(oldfunc, newfunc):  # targetfunc内のoldfuncをnewfuncに置換
     {1} = {2}
         """.format(module_name, oldfunc.__name__, newfunc.__name__))  # targetfuncのソースを改変する。
         src = '\n'.join(srclines)  # targetfuncのソースを作成。
+        print(src)
         temp = dict()  # exec()の仮想モジュールの名前空間を受けとる辞書。
         exec(compile(src,'virtual_module','exec'), temp, temp)  # srcをコンパイルしてtempに取得。
         @wraps(func)
@@ -24,7 +27,14 @@ def replaceFunc(oldfunc, newfunc):  # targetfunc内のoldfuncをnewfuncに置換
         return wrapper
     return decorate
 
+@replaceFunc(print, newFunc)
+def targetFunc():  # この関数の中の関数を置換する。
+    print("ターゲットの関数")
+# def newFunc(arg):  # 置換後の新しい関数。
+#     print("置換後の関数で{}を出力。".format(arg))
+
+
 if __name__ == "__main__":
-    targetFunc = replaceFunc(print, newFunc)(targetFunc)
+#     targetFunc = replaceFunc(print, newFunc)(targetFunc)
     targetFunc()
     
