@@ -1,2 +1,6 @@
 eclipse.preferences.version=1
+<<<<<<< HEAD
+=======
+encoding//src/example.py=utf-8
+>>>>>>> refs/heads/feature/201705292217
 encoding//src/replacefunc.py=utf-8
