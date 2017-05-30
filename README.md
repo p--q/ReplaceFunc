@@ -26,3 +26,15 @@ targetFunc()  # Call the decorated function
 
 targetFunc.__wrapped__()  # Call the wrapped function
 ```
+
+targetFunc () is rewritten by replaceFunc () as follows.
+
+```
+def targetFunc():  # Replace functions in this function
+    #replace functions
+    len = newFunc2
+    print = newFunc
+    print("arg in the taget function")
+    len("arg in the taget function2")
+```
+
