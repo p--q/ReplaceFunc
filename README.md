@@ -2,7 +2,7 @@
 
 Replace functions in the function to decorate
 
-## Deployment:
+## Deployment
 install replacefunc.py into PYTHONPATH.
 
 ## Usage Example
