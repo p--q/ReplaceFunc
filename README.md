@@ -2,6 +2,12 @@
 
 Replace functions in the function to decorate
 
+## Deployment:
+install replacefunc.py into PYTHONPATH.
+
+## Usage Example
+
+
 ```
 from replacefunc import replaceFunc
 
