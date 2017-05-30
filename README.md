@@ -27,7 +27,7 @@ targetFunc()  # Call the decorated function
 targetFunc.__wrapped__()  # Call the wrapped function
 ```
 
-targetFunc () is rewritten by replaceFunc () as follows.
+targetFunc() is rewritten by replaceFunc() as follows.
 
 ```
 def targetFunc():  # Replace functions in this function
