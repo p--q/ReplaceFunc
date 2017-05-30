@@ -2,7 +2,7 @@
 
 Replace functions in the function to decorate
 
-'''
+```
 from replacefunc import replaceFunc
 def newFunc(arg):  # 置換後の新しい関数。
     print("置換後の関数で{}を出力。".format(arg)) 
@@ -17,4 +17,4 @@ def targetFunc():  # この関数の中の関数を置換する。
     
 targetFunc()
 targetFunc.__wrapped__()
-'''
+```
