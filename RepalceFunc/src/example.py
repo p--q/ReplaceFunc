@@ -8,7 +8,7 @@ def newFunc(arg):  # new function
 def newFunc2(arg):  # new function2
     print("{} printed by the new function2.".format(arg))
     
-@replaceFunc(print=newFunc, len=newFunc2)  # old function = new function
+@replaceFunc(print=newFunc, len=newFunc2, arg="arg2")  # old function = new function
 def targetFunc():  # Replace functions in this function
     print("arg in the taget function")
     len("arg in the taget function2")
