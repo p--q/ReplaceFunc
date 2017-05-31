@@ -38,3 +38,5 @@ def targetFunc():  # Replace functions in this function
     len("arg in the taget function2")
 ```
 
+## Release Note
+v2.0.0 When the value of the keyword argument is a string, the string in the function code of the argument is replaced　with the string.
