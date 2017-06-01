@@ -23,8 +23,6 @@ def targetFunc():  # Replace functions in this function
     len("arg in the taget function2")
     
 targetFunc()  # Call the decorated function
-
-targetFunc.__wrapped__()  # Call the wrapped function
 ```
 
 targetFunc() is rewritten by replaceFunc() as follows.
@@ -38,5 +36,19 @@ def targetFunc():  # Replace functions in this function
     len("arg in the taget function2")
 ```
 
+Adding keyword arguments allows you to output the edited code.
+
+```
+targetFunc = replaceFunc(print=newFunc, len=newFunc2)(targetFunc, debug=True)
+targetFunc()
+```
+
+## Disadvantage
+
+Breakpoint can not be set in the edited code.
+
+
 ## Release Note
 v2.0.0 When the value of the keyword argument is a string, the string in the function code of the argument is replaced　with the string.
+
+v2.2.0 Changed to get bytecode and return it. This invalidates __wraped__ in functools.wrap.
