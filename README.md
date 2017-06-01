@@ -51,4 +51,4 @@ Breakpoint can not be set in the edited code.
 ## Release Note
 v2.0.0 When the value of the keyword argument is a string, the string in the function code of the argument is replaced　with the string.
 
-v2.2.0 Changed to get bytecode and return it. This invalidates __wraped__ in functools.wrap.
+v2.2.0 Changed to get bytecode and return it. This invalidates ``__wraped__`` in functools.wrap.
