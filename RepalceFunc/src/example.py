@@ -15,4 +15,13 @@ def targetFunc():  # Replace functions in this function
     
 targetFunc()  # Call the decorated function
 
-targetFunc.__wrapped__()  # Call the wrapped function
+def targetFunc2():  # Replace functions in this function
+    print("arg in the taget function")
+    len("arg in the taget function2")
+
+# If you want to display the edited code, add keyword argument.
+targetFunc2 = replaceFunc(print=newFunc)(targetFunc2, debug=True)
+targetFunc2()
+
+
+
