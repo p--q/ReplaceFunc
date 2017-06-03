@@ -2,6 +2,8 @@
 
 Replace functions in the function to decorate
 
+(It is better to use <a href="http://docs.python.jp/3.5/library/unittest.mock.html#unittest.mock.patch">unittest.mock.patch() than to use this replaceFunc().)
+
 ## Deployment
 install replacefunc.py into PYTHONPATH.
 
